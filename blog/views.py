@@ -1,12 +1,31 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+
+dives = [
+    {
+        'site': 'Leafy Greans',
+        'divers': 'Aaron Glenn',
+        'date_dove': 'May 20, 2020',
+        'content': 'awesome training site'
+    },
+    {
+        'site': 'Dougan Falls',
+        'divers': 'Aaron Glenn',
+        'date_dove': 'June 2, 2020',
+        'content': 'crazy waterfall'
+    }
+]
 
 
 def home(request):
-    return HttpResponse('<h1>Blog Home</h1>')
+    context = {
+        'posts': dives,
+        'title': 'home'
+
+    }
+    return render(request, 'blog/home.html', context)
 
 
 def about(request):
-    return HttpResponse('<h1>Blog About</h1>')
+    return render(request, 'blog/about.html')
 
 # Create your views here.
