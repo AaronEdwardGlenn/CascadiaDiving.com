@@ -1,18 +1,15 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-<meta charset="utf-8">
-    <head>
-        {% if title %}
-            <title>CDC - {{ title }}</title>
-        {% else %}
-            <title>Cascadia Diving</title>
-        {% endif %}
-    </head>
-    <body>
-        {% for post in posts %}
-            <h1>{{ post.site }}</h1>
-            <p>By {{ post.divers }} on {{ post.date_dove}}</p>
-            <p>{{ post.content }}
-        {% endfor %}
-    </body>
-</html>
+{% extends 'blog/base.html' %}
+{% block content %}
+{% for post in posts %}
+<article class="media content-section">
+    <div class="media-body">
+        <div class="article-metadata">
+            <a class="mr-2" href="#">Divers - {{ post.divers }}</a>
+            <small class="text-muted">{{ post.date_posted }}</small>
+        </div>
+        <h2><a class="article-title" href="#">{{ post.site }}</a></h2>
+        <p class="article-content">{{ post.content }}</p>
+    </div>
+</article>
+{% endfor %}
+{% endblock %}
