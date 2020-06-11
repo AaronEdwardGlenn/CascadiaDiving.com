@@ -10,6 +10,7 @@ def get_sentinel_user():
 
 class Post(models.Model):
     title = models.CharField(max_length=100)
+    dive_site = models.CharField(max_length=100, blank=True)
     content = models.TextField()
     date_posted = models.DateTimeField(default=timezone.now)
-    author = models.ForeignKey(User, on_delete=models.SET(get_sentinel_user))
+    divers = models.ForeignKey(User, on_delete=models.SET(get_sentinel_user))
