@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from .models import DivePost
 dives = [
     {
         'site': 'Leafy Greans',
@@ -18,7 +18,7 @@ dives = [
 
 def home(request):
     context = {
-        'posts': dives,
+        'posts': DivePost.objects.all(),
         'title': 'home'
 
     }

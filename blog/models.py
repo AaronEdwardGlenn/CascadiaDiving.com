@@ -8,9 +8,12 @@ def get_sentinel_user():
     return get_user_model().objects.get_or_create(username='deleted')[0]
 
 
-class Post(models.Model):
+class DivePost(models.Model):
     title = models.CharField(max_length=100)
     dive_site = models.CharField(max_length=100, blank=True)
     content = models.TextField()
     date_posted = models.DateTimeField(default=timezone.now)
-    divers = models.ForeignKey(User, on_delete=models.SET(get_sentinel_user))
+    diver = models.ForeignKey(User, on_delete=models.SET(get_sentinel_user))
+
+    def __str__(self):
+        return self.title
