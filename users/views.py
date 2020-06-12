@@ -19,8 +19,6 @@ def register(request):
 
 @login_required
 def profile(request):
-    return render(request, 'users/profiles.html')
-
     u_form = UserUpdateForm()
     p_form = ProfileUpdateForm()
 
@@ -29,4 +27,4 @@ def profile(request):
         'p_form': p_form
     }
 
-    return render(request, 'users/profile.html', context)
+    return render(request, 'users/profiles.html', context)
