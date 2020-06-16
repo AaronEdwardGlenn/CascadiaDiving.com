@@ -1,9 +1,19 @@
 body {
-  background: #fafafa;
+  background-image: url("/media/background_images/fish_background2.jpg");
   color: #333333;
+  background-size: 20%;
   margin-top: 5rem;
 }
 
+.carousel-border {
+    border: 5px solid darkgrey;
+    margin-top: 5px;
+}
+
+.logo-img {
+    height: 70px;
+    width: auto;
+}
 max {
     width: 100% !important
 }
@@ -17,7 +27,8 @@ ul {
 }
 
 .bg-steel {
-  background-color: #5f788a;
+  background-color: gray;
+  padding: 0%;
 }
 
 .site-header .navbar-nav .nav-link {
@@ -57,6 +68,10 @@ a.article-title:hover {
   height: 65px;
   width: 65px;
   margin-right: 16px;
+}
+
+.logo {
+
 }
 
 .article-metadata {
