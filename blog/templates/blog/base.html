@@ -28,9 +28,9 @@
                     <div class="navbar-nav mr-auto">
                         <a class="nav-item nav-link" href="{% url 'blog-home' %}">Home</a>
                         <a class="nav-item nav-link" href="{% url 'blog-about' %}">About</a>
-                        <a class="nav-item nav-link" href="#">Join!</a>
                         <a class="nav-item nav-link" href="#">Spearfishing</a>
                         <a class="nav-item nav-link" href="#">Lessons</a>
+                        <a class="nav-item nav-link" href="#">Join!</a>
                     </div>
                     <!-- Navbar Right Side -->
                     <div class="navbar-nav">
@@ -49,7 +49,7 @@
 
 <!-- ### Main Page Container -->
     <main role="main" class="row m-5">
-        <div class="col-sm-8">
+        <div class="col-sm-9">
             <div>
                 {% if messages %}
                     {% for message in messages %}
@@ -61,15 +61,17 @@
                 {% block content %}{% endblock %}
             </div>
         </div>
-            <div class="col-sm-4">
+<!-- ### THIS IS THE SIDEBAR #### -->
+            <div class="col-sm-3">
                 <div class="content-section">
-                    <h3>Our Sidebar</h3>
-                    <p class='text-muted'>You can put any information here you'd like.
+                    <h3>Updates</h3>
+                    <p class='text-muted'>Get the latest info on Cascadia Dive Club!
                         <ul class="list-group">
-                            <li class="list-group-item list-group-item-light">Latest Posts</li>
-                            <li class="list-group-item list-group-item-light">Announcements</li>
-                            <li class="list-group-item list-group-item-light">Calendars</li>
-                            <li class="list-group-item list-group-item-light">etc</li>
+                            <li class="list-group-item list-group-item-light">Recent Dives</li>
+                            <li class="list-group-item list-group-item-light">Upcomming Dive Trips</li>
+                            <li class="list-group-item list-group-item-light">Marine Ecology Certification</li>
+                            <li class="list-group-item list-group-item-light">Diving in Oregon Information</li>
+                            <li class="list-group-item list-group-item-light">Recommended Dive Gear</li>
                         </ul>
                     </p>
                 </div>

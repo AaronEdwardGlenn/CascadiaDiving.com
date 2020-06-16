@@ -5,16 +5,29 @@ body {
   margin-top: 5rem;
 }
 
+.videosize {
+    
+
+    /* Setting width & height to auto prevents the browser from stretching or squishing the video */
+    width: auto;
+    height: auto;
+
+    /* Center the video */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
 .carousel-border {
     border: 5px solid darkgrey;
-    margin-top: 5px;
 }
 
 .logo-img {
     height: 70px;
     width: auto;
 }
-max {
+.max {
     width: 100% !important
 }
 
@@ -106,5 +119,6 @@ footer {
     text-align: center;
     text-decoration: underline;
     font-weight: bold;
-    
+    margin-bottom: 0px;
+
 }
