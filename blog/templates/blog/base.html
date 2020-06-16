@@ -15,11 +15,12 @@
     {% endif %}
 </head>
 <body>
+<!-- ### Header Section -->
     <header class="site-header">
         <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
             <div class="container">
                 <img class="logo-img" src="/media/logo.png">
-                <a class="navbar-brand mr-4" href="/">Cascadia Dive Company</a>
+                <a class="navbar-brand mr-4" href="/">Cascadia Dive Club</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -27,6 +28,9 @@
                     <div class="navbar-nav mr-auto">
                         <a class="nav-item nav-link" href="{% url 'blog-home' %}">Home</a>
                         <a class="nav-item nav-link" href="{% url 'blog-about' %}">About</a>
+                        <a class="nav-item nav-link" href="#">Spearfishing</a>
+                        <a class="nav-item nav-link" href="#">Lessons</a>
+                        <a class="nav-item nav-link" href="#">Join!</a>
                     </div>
                     <!-- Navbar Right Side -->
                     <div class="navbar-nav">
@@ -42,8 +46,10 @@
             </div>
         </nav>
     </header>
-    <main role="main" class="container">
-        <div class="row">
+
+<!-- ### Main Page Container -->
+    <main role="main" class="row m-5">
+        <div class="col-sm-9">
             <div>
                 {% if messages %}
                     {% for message in messages %}
@@ -54,21 +60,24 @@
                 {% endif %}
                 {% block content %}{% endblock %}
             </div>
-            <!-- <div class="col-md-4">
+        </div>
+<!-- ### THIS IS THE SIDEBAR #### -->
+            <div class="col-sm-3">
                 <div class="content-section">
-                    <h3>Our Sidebar</h3>
-                    <p class='text-muted'>You can put any information here you'd like.
+                    <h3>Updates</h3>
+                    <p class='text-muted'>Get the latest info on Cascadia Dive Club!
                         <ul class="list-group">
-                            <li class="list-group-item list-group-item-light">Latest Posts</li>
-                            <li class="list-group-item list-group-item-light">Announcements</li>
-                            <li class="list-group-item list-group-item-light">Calendars</li>
-                            <li class="list-group-item list-group-item-light">etc</li>
+                            <li class="list-group-item list-group-item-light">Recent Dives</li>
+                            <li class="list-group-item list-group-item-light">Upcomming Dive Trips</li>
+                            <li class="list-group-item list-group-item-light">Marine Ecology Certification</li>
+                            <li class="list-group-item list-group-item-light">Diving in Oregon Information</li>
+                            <li class="list-group-item list-group-item-light">Recommended Dive Gear</li>
                         </ul>
                     </p>
                 </div>
-            </div> -->
-        </div>
+            </div>
     </main>
+    <footer>Site developed by <a href="https://www.linkedin.com/in/aaronedwardglenn">Aaron Edward Glenn</a> | &copy 2020</footer>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
