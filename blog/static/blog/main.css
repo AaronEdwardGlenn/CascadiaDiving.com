@@ -6,7 +6,7 @@ body {
 }
 
 .videosize {
-    
+
 
     /* Setting width & height to auto prevents the browser from stretching or squishing the video */
     width: auto;
@@ -25,8 +25,10 @@ body {
 
 .logo-img {
     height: 70px;
-    width: auto;
-}
+    padding-right: 5px;
+    margin-bottom: -10px;
+    }
+
 .max {
     width: 100% !important
 }
@@ -49,11 +51,15 @@ ul {
 }
 
 .site-header .navbar-nav .nav-link:hover {
-  color: #ffffff;
+   font-weight: bold;
+   color: white;
+   text-decoration: underline;
+   text-decoration-style: solid;
 }
 
-.site-header .navbar-nav .nav-link.active {
+.site-header .navbar-nav .nav-link .active {
   font-weight: 500;
+  color: yellow;
 }
 
 .content-section {
