@@ -5,14 +5,24 @@ body {
   margin-top: 5rem;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  color: #444444;
+}
+
+ul {
+  margin: 0;
+}
+
+footer {
+    text-align: center;
+    text-decoration: underline;
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+
 .videosize {
-
-
-    /* Setting width & height to auto prevents the browser from stretching or squishing the video */
     width: auto;
     height: auto;
-
-    /* Center the video */
     position: absolute;
     top: 50%;
     left: 50%;
@@ -27,18 +37,16 @@ body {
     height: 70px;
     padding-right: 5px;
     margin-bottom: -10px;
-    }
+}
+
+.CDC-name {
+    font-family: 'Fredericka the Great', cursive !important;
+    font-size: 25px;
+    margin-right: 50px !important;
+}
 
 .max {
     width: 100% !important
-}
-
-h1, h2, h3, h4, h5, h6 {
-  color: #444444;
-}
-
-ul {
-  margin: 0;
 }
 
 .bg-steel {
@@ -58,7 +66,7 @@ ul {
 .nav-link.active {
     font-weight: bold !important;
     color: white !important;
-    border-bottom: 4px double blue !important; 
+    border-bottom: 3px solid blue !important;
     padding-bottom: 5px !important;
 }
 
@@ -115,11 +123,4 @@ a.article-title:hover {
 
 .account-heading {
   font-size: 2.5rem;
-}
-
-footer {
-    text-align: center;
-    text-decoration: underline;
-    font-weight: bold;
-    margin-bottom: 0px;
 }
