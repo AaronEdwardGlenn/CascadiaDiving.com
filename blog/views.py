@@ -22,3 +22,10 @@ def carousel(request):
         'blog-home': 'active'
     }
     return render(request, 'blog/carousel.html', context)
+
+
+def spearfishing(request):
+    context = {
+        'spearfishing': 'active'
+    }
+    return render(request, 'blog/spearfishing.html', context)

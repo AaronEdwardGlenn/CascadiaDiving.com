@@ -20,6 +20,10 @@ footer {
     margin-bottom: 0px;
 }
 
+.list-group-item:hover {
+    background-color: darkolivegreen;
+    color: white;
+}
 .videosize {
     width: auto;
     height: auto;
@@ -30,7 +34,11 @@ footer {
 }
 
 .carousel-border {
-    border: 5px solid darkgrey;
+    border: 5px solid darkolivegreen;
+}
+
+.navbar-border {
+    border: 5px solid darkolivegreen !important;
 }
 
 .logo-img {
@@ -41,7 +49,8 @@ footer {
 
 .CDC-name {
     font-family: 'Fredericka the Great', cursive !important;
-    font-size: 25px;
+    font-size: 29px;
+    text-shadow: 1px 1px 4px black;
     margin-right: 50px !important;
 }
 
@@ -52,6 +61,10 @@ footer {
 .bg-steel {
   background-color: gray;
   padding: 0%;
+}
+
+.nav-background {
+    background-color: darkolivegreen !important;
 }
 
 .site-header .navbar-nav .nav-link {
