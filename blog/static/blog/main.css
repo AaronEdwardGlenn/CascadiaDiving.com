@@ -5,32 +5,6 @@ body {
   margin-top: 5rem;
 }
 
-.videosize {
-    
-
-    /* Setting width & height to auto prevents the browser from stretching or squishing the video */
-    width: auto;
-    height: auto;
-
-    /* Center the video */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-}
-
-.carousel-border {
-    border: 5px solid darkgrey;
-}
-
-.logo-img {
-    height: 70px;
-    width: auto;
-}
-.max {
-    width: 100% !important
-}
-
 h1, h2, h3, h4, h5, h6 {
   color: #444444;
 }
@@ -39,9 +13,58 @@ ul {
   margin: 0;
 }
 
+footer {
+    text-align: center;
+    text-decoration: underline;
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+
+.list-group-item:hover {
+    background-color: darkolivegreen;
+    color: white;
+}
+.videosize {
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.carousel-border {
+    border: 5px solid darkolivegreen;
+}
+
+.navbar-border {
+    border: 5px solid darkolivegreen !important;
+}
+
+.logo-img {
+    height: 70px;
+    padding-right: 5px;
+    margin-bottom: -10px;
+}
+
+.CDC-name {
+    font-family: 'Fredericka the Great', cursive !important;
+    font-size: 29px;
+    text-shadow: 1px 1px 4px black;
+    margin-right: 50px !important;
+}
+
+.max {
+    width: 100% !important
+}
+
 .bg-steel {
   background-color: gray;
   padding: 0%;
+}
+
+.nav-background {
+    background-color: darkolivegreen !important;
 }
 
 .site-header .navbar-nav .nav-link {
@@ -49,11 +72,15 @@ ul {
 }
 
 .site-header .navbar-nav .nav-link:hover {
-  color: #ffffff;
+   font-weight: bold;
+   color: white;
 }
 
-.site-header .navbar-nav .nav-link.active {
-  font-weight: 500;
+.nav-link.active {
+    font-weight: bold !important;
+    color: white !important;
+    border-bottom: 3px solid blue !important;
+    padding-bottom: 5px !important;
 }
 
 .content-section {
@@ -83,10 +110,6 @@ a.article-title:hover {
   margin-right: 16px;
 }
 
-.logo {
-
-}
-
 .article-metadata {
   padding-bottom: 1px;
   margin-bottom: 4px;
@@ -113,12 +136,4 @@ a.article-title:hover {
 
 .account-heading {
   font-size: 2.5rem;
-}
-
-footer {
-    text-align: center;
-    text-decoration: underline;
-    font-weight: bold;
-    margin-bottom: 0px;
-
 }
