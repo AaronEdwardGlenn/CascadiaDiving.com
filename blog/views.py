@@ -29,3 +29,10 @@ def spearfishing(request):
         'spearfishing': 'active'
     }
     return render(request, 'blog/spearfishing.html', context)
+
+
+def lessons(request):
+    context = {
+        'lessons': 'active'
+    }
+    return render(request, 'blog/lessons.html', context)
