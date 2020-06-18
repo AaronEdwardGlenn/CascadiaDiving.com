@@ -14,7 +14,11 @@ def register(request):
             return redirect('blog-home')
     else:
         form = UserRegisterForm()
-    return render(request, 'users/register.html', {'form': form})
+        context = {
+            'register': 'active',
+            'form': form
+        }
+    return render(request, 'users/register.html', context)
 
 
 @login_required
@@ -32,7 +36,8 @@ def profile(request):
         p_form = ProfileUpdateForm(instance=request.user.profile)
     context = {
         'u_form': u_form,
-        'p_form': p_form
+        'p_form': p_form,
+        'profile': 'active'
     }
 
     return render(request, 'users/profiles.html', context)
