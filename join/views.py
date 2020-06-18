@@ -1,3 +1,8 @@
 from django.shortcuts import render
 
-# Create your views here.
+
+def join(request):
+    context = {
+        'join': 'active'
+    }
+    return render(request, 'join/join.html', context)
