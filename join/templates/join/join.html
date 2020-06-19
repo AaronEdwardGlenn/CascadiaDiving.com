@@ -1,6 +1,25 @@
 {% extends 'blog/base.html' %}
+{% load crispy_forms_tags %}
 {% block content %}
-<h1>Join Page</h1>
-<div class="col-sm-8">
+<div class="content-section">
+    <form method="POST">
+        {% csrf_token %}
+        <fieldset class="form-group">
+            <legend class="border-bottom mb-4">Join Cascadia Dive Club!</legend>
+            <div class="media-body">
+                <h2 class="account-heading">{{ user.username }}</h2>
+                <p class="text-secondary">{{ user.email }}</p>
+            </div>
+            {{ form|crispy }}
+        </fieldset>
+        <div class="form-group">
+            <button class="btn btn-outline-info" type="submit">Join!</button>
+        </div>
+    </form>
+    <!-- <div class="border-top pt-3">
+    <small class="text-muted">
+    Already Have An Account?<a class="ml-2" href="{% url 'login' %}">Login</a>
+</small>
+</div> -->
 </div>
 {% endblock %}
