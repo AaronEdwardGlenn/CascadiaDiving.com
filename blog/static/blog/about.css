@@ -1,0 +1,23 @@
+@keyframes slidein {
+    0% { margin-left:-800px; }
+    20% { margin-left:-800px; }
+    35% { margin-left:0px; }
+    100% { margin-left:0px; }
+}
+.text-section {
+    background-color: rgba(255, 239, 213, 0.9);
+    height: 100%;
+}
+
+.move:first-of-type {
+    animation: slidein 7s 1;
+}
+
+.move:last-of-type {
+    background-color: #99ccff;
+}
+
+.responsive {
+    width: 100%;
+    height: auto;
+}
