@@ -1,10 +1,11 @@
 from django.shortcuts import render
-from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from .models import DivePost
 from django.views.generic import (
     ListView,
     DetailView,
     CreateView,
+    UpdateView,
     DeleteView
 )
 
@@ -37,13 +38,19 @@ class PostCreateView(LoginRequiredMixin, CreateView):
         return super().form_valid(form)
 
 
-class PostCreateView(LoginRequiredMixin, CreateView):
+class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = DivePost
     fields = ['dive_site', 'content']
 
     def form_valid(self, form):
         form.instance.diver = self.request.user
         return super().form_valid(form)
+
+    def test_func(self):
+        post = self.get_object()
+        if self.request.user == post.diver:
+            return True
+        return False
 
 
 def about(request):
