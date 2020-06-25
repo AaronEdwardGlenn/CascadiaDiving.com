@@ -1,6 +1,13 @@
 from django.shortcuts import render
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from .models import DivePost
-from django.views.generic import ListView, DetailView
+from django.views.generic import (
+    ListView,
+    DetailView,
+    CreateView,
+    UpdateView,
+    DeleteView
+)
 
 
 def home(request):
@@ -20,6 +27,41 @@ class PostListView(ListView):
 
 class PostDetailView(DetailView):
     model = DivePost
+
+
+class PostCreateView(LoginRequiredMixin, CreateView):
+    model = DivePost
+    fields = ['dive_site', 'content']
+
+    def form_valid(self, form):
+        form.instance.diver = self.request.user
+        return super().form_valid(form)
+
+
+class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
+    model = DivePost
+    fields = ['dive_site', 'content']
+
+    def form_valid(self, form):
+        form.instance.diver = self.request.user
+        return super().form_valid(form)
+
+    def test_func(self):
+        post = self.get_object()
+        if self.request.user == post.diver:
+            return True
+        return False
+
+
+class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
+    model = DivePost
+    success_url = '/'
+
+    def test_func(self):
+        post = self.get_object()
+        if self.request.user == post.diver:
+            return True
+        return False
 
 
 def about(request):
