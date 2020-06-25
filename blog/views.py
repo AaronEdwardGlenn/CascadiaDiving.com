@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import DivePost
+from django.views.generic import ListView, DetailView
 
 
 def home(request):
@@ -8,6 +9,17 @@ def home(request):
         'home': 'active'
     }
     return render(request, 'blog/home.html', context)
+
+
+class PostListView(ListView):
+    model = DivePost
+    template_name = 'blog/home.html'
+    context_object_name = 'posts'
+    ordering = ['-date_posted']
+
+
+class PostDetailView(DetailView):
+    model = DivePost
 
 
 def about(request):
