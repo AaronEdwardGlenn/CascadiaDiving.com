@@ -1,10 +1,6 @@
-@keyframes carousel-text-animation {
-  from {color: rgb(3, 252, 240);}
-  to {color: lightyellow;}
-}
-
 body {
     background-image: url("/media/background_images/fish_background2.jpg");
+    background-attachment: fixed;
     color: #333333;
     background-size: 20%;
     margin-top: 5rem;
@@ -29,6 +25,7 @@ footer {
     background-color: darkolivegreen;
     color: white;
 }
+
 .videosize {
     width: auto;
     height: auto;
@@ -36,10 +33,6 @@ footer {
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-}
-
-.carousel-border {
-    border: 5px solid darkolivegreen;
 }
 
 .navbar-border {
@@ -57,27 +50,9 @@ footer {
     width: 100%;
 }
 
-.highlight-text {
-    color: white;
-    text-shadow: 2px -1px 2px black !important;
-}
-
-.background-color-highlight {
-    background-color: rgba(104, 160, 228, 0.8);
-    color: white;
-}
-.vizable-text {
-    text-shadow: 1px 1px 4px black;
-    color: lightyellow;
-    animation-name: carousel-text-animation;
-    animation-duration: 8s;
-
-}
-
 .CDC-name {
-    font-family: 'Fredericka the Great', cursive !important;
     font-size: 29px;
-    text-shadow: 1px 1px 4px black;
+    text-shadow: 1px 1px 3px black;
     margin-right: 50px !important;
 }
 
@@ -91,15 +66,16 @@ footer {
 }
 
 .nav-background {
-    background-color: darkolivegreen !important;
+    background-color: #3366cc !important;
 }
 
 .site-header .navbar-nav .nav-link {
-    color: #cbd5db;
+    color: white;
 }
 
 .site-header .navbar-nav .nav-link:hover {
     font-weight: bold;
+    text-shadow: 1px 1px 3px black;
     color: white;
 }
 
@@ -108,6 +84,8 @@ footer {
     color: white !important;
     border-bottom: 3px solid blue !important;
     padding-bottom: 5px !important;
+    text-shadow: 1px 1px 3px black !important;
+
 }
 
 .content-section {
@@ -165,17 +143,8 @@ a.article-title:hover {
     font-size: 2.5rem;
 }
 
-/* @media all and (min-width: 1200px) {
-    .media-large {
-        color: red !important;
-        text-shadow:
-        0.07em 0 black,
-        0 0.07em black,
-        -0.07em 0 black,
-        0 -0.07em black;
-        font-size: 50px;
+@media all and (max-width: 400px) {
+    .CDC-name {
+        font-size: 18px;
     }
-    .carousel-caption {
-        bottom: 60%;
-    }
-} */
+}

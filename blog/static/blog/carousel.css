@@ -1,0 +1,24 @@
+@keyframes carousel-text-animation {
+  from {color: rgb(3, 252, 240);}
+  to {color: lightyellow;}
+}
+
+.highlight-text {
+    color: white;
+    text-shadow: 2px -1px 2px black !important;
+}
+
+.background-color-highlight {
+    background-color: rgba(44, 130, 228, 0.8);
+    color: white;
+}
+.vizable-text {
+    text-shadow: 1px 1px 4px black;
+    color: lightyellow;
+    animation-name: carousel-text-animation;
+    animation-duration: 8s;
+}
+
+.carousel-border {
+    border: 5px solid darkolivegreen;
+}
