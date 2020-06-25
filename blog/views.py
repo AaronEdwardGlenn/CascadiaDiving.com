@@ -53,6 +53,17 @@ class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
         return False
 
 
+class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
+    model = DivePost
+    success_url = '/'
+
+    def test_func(self):
+        post = self.get_object()
+        if self.request.user == post.diver:
+            return True
+        return False
+
+
 def about(request):
     context = {
         'about': 'active'
