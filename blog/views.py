@@ -31,7 +31,6 @@ class UserPostListView(ListView):
     model = DivePost
     template_name = 'blog/user_diveposts.html'
     context_object_name = 'posts'
-    ordering = ['-date_posted']
     paginate_by = 2
 
     def get_queryset(self):
