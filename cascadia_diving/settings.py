@@ -25,7 +25,7 @@ SECRET_KEY = '_2rwlw-feqjqqb17rkj1w@^3ha9oktzjwy+m1k18_wi=un8qng'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['cascadiadiving.herokuapp.com']
 
 
 # Application definition
