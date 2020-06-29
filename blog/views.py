@@ -27,6 +27,14 @@ class PostListView(ListView):
     paginate_by = 2
 
 
+class RecentDivesListView(ListView):
+    model = DivePost
+    template_name = 'blog/recent_dives.html'
+    context_object_name = 'posts'
+    ordering = ['-date_posted']
+    paginate_by = 5.
+
+
 class UserPostListView(ListView):
     model = DivePost
     template_name = 'blog/user_diveposts.html'
