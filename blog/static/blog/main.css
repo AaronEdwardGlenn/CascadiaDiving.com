@@ -1,8 +1,7 @@
 body {
-    background-image: url("/media/background_images/fish_background2.jpg");
+    background-image: url("/media/background_images/dark-ocean.jpg");
     background-attachment: fixed;
     color: #333333;
-    background-size: 20%;
     margin-top: 5rem;
 }
 
@@ -21,9 +20,13 @@ footer {
     margin-bottom: 0px;
 }
 
+.list-group-item {
+    color: black !important;
+}
+
 .list-group-item:hover {
-    background-color: darkolivegreen;
-    color: white;
+    background-color: rgb(111, 127, 146, .2);
+    color: white !important;
 }
 
 .videosize {
@@ -35,25 +38,24 @@ footer {
     transform: translate(-50%,-50%);
 }
 
-.navbar-border {
-    border: 5px solid darkolivegreen !important;
-}
 
 .logo-img {
-    height: 70px;
-    padding-right: 5px;
-    margin-bottom: -10px;
+    height: 44px;
+    margin-bottom: 27px;
+    border: 1px solid black;
 }
 
 .flag {
     object-fit: cover;
     width: 100%;
+    border: 1px solid white;
 }
 
 .CDC-name {
-    font-size: 29px;
-    text-shadow: 1px 1px 3px black;
     margin-right: 50px !important;
+    padding-left: 5px !important;
+    color: #353835 !important;
+    font-size: 37px !important;
 }
 
 .max {
@@ -66,34 +68,59 @@ footer {
 }
 
 .nav-background {
-    background-color: #3366cc !important;
+    background: none !important;
 }
 
 .site-header .navbar-nav .nav-link {
-    color: white;
+    color: #353835;
+}
+
+.nav-reviz {
+    padding-right: 1px !important;
+    padding-left: 0px !important;
+    margin-left: 1rem !important;
+}
+
+.CDC-name:before {
+    position: absolute !important;
+    content: attr(data-text) !important;
+    background: -webkit-linear-gradient(pink, red) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    width: 0% !important;
+    overflow: hidden !important;
+    transition: 1s;
+}
+
+.CDC-name:hover:before {
+    width: 100% !important;
 }
 
 .site-header .navbar-nav .nav-link:hover {
-    font-weight: bold;
-    text-shadow: 1px 1px 3px black;
-    color: white;
+    color: #e70000;
 }
 
 .nav-link.active {
-    font-weight: bold !important;
-    color: white !important;
-    border-bottom: 3px solid blue !important;
+    color: #e70000 !important;
+    border-bottom: 2px solid #5a6a7e !important;
     padding-bottom: 5px !important;
-    text-shadow: 1px 1px 3px black !important;
 
 }
 
+.nav-subheader {
+    color: white;
+}
+
+.navbar-content {
+    color: white;
+}
+
 .content-section {
-    background: #ffffff;
+    background: rgb(111, 127, 146, .7);
     padding: 10px 20px;
-    border: 1px solid #dddddd;
     border-radius: 3px;
     margin-bottom: 20px;
+    border: 1px solid white;
 }
 
 .article-title {
@@ -147,4 +174,13 @@ a.article-title:hover {
     .CDC-name {
         font-size: 18px;
     }
+}
+@media (min-width: 1200px) {
+.container {
+    max-width: 1200px !important;
+    padding: 0px !important;
+}
+/* .main-div {
+    padding: 0px !important;
+} */
 }
