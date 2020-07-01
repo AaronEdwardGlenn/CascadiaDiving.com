@@ -1,6 +1,6 @@
 @keyframes slidein {
     0% { margin-left:-800px; }
-    20% { margin-left:-800px; }
+    20% { margin-left:0px; }
     35% { margin-left:0px; }
     100% { margin-left:0px; }
 }
@@ -10,11 +10,11 @@
 }
 
 .move:first-of-type {
-    animation: slidein 7s 1;
+    animation: slidein 4s 1;
 }
 
 .move:last-of-type {
-    background-color: #99ccff;
+    background-color: rgba(143, 194, 210, 0.9);
 }
 
 .responsive {
