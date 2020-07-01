@@ -10,8 +10,7 @@
             <a class="mr-2 article-divers" href={% url 'user-diveposts' post.diver.username %}>{{ post.diver }}</a>
             <small class="article-date">{{ post.date_posted|date:'l, F jS Y' }}</small>
         </div>
-        <h2><a class="article-title" href="{% url 'post-detail' post.id %}">{{ post.title }}</a></h2>
-        <h4>{{ post.dive_site }}</h4>
+        <h2><a class="article-title" href="{% url 'post-detail' post.id %}">{{ post.dive_site }}</a></h2>
         <!-- <p class="article-content">{{ post.content }}</p> -->
     </div>
 </article>

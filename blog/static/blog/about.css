@@ -14,7 +14,8 @@
 }
 
 .move:last-of-type {
-    background-color: rgba(143, 194, 210, 0.9);
+    color: black !important;
+    background-color: rgb(23, 162, 184, 0.7);
 }
 
 .responsive {
