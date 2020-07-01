@@ -7,7 +7,8 @@
             <a class="mr-2 article-divers" href="#">{{ object.diver }}</a>
             <small class="article-date">{{ object.date_posted|date:'l, F jS Y' }}</small>
         </div>
-        <h2 class="article-title">{{ object.dive_site }}</h2>
+        <h2 class="article-title">{{ object.title }}</h2>
+        <h4><a class="map-link" href="https://www.google.com/maps/search/?api=1&query={{ object.dive_site }}">{{ object.dive_site }}</a></h4>
         <p class="article-content">{{ object.content }}</p>
         <div class="article-metadata">
         </div>
