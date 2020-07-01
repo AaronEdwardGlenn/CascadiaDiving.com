@@ -16,14 +16,17 @@
     {% else %}
     <title>Cascadia Dive Club</title>
     {% endif %}
+
 </head>
 <body>
-<!-- ### Header Section -->
+    <!-- ### Header Section -->
     <header class="site-header">
         <nav class="navbar navbar-expand-md navbar-dark nav-background bg-steel fixed-top">
-            <div class="container">
-                <img class="logo-img" src="/media/logo.png">
-                <a class="navbar-brand mr-4 CDC-name" href="/">Cascadia Dive Club</a>
+            <div class="nav-reviz container">
+                <div class="logo-CDC">
+                    <img class="logo-img" src="/media/logo2.png">
+                    <a class="navbar-brand mr-4 CDC-name" href="/">Cascadia Dive Club</a>
+                </div>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -38,8 +41,8 @@
                     <!-- Navbar Right Side -->
                     <div class="navbar-nav">
                         {% if user.is_authenticated %}
-                        <a class="nav-item nav-link {{ profile }}" href="{% url 'profile' %}">Profile</a>
                         <a class="nav-item nav-link {{ profile }}" href="{% url 'post-create' %}">Log Dive</a>
+                        <a class="nav-item nav-link {{ profile }}" href="{% url 'profile' %}">Profile</a>
                         <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>
                         {% else %}
                         <a class="nav-item nav-link" href="{% url 'login' %}">Login</a>
@@ -51,38 +54,38 @@
         </nav>
     </header>
 
-<!-- ### Main Page Container -->
-    <main role="main" class="row m-5">
-        <div class="col-sm-9">
+    <!-- ### Main Page Container -->
+    <main role="main" class="row m-1">
+        <div class="main-div col-sm-9">
             <div>
                 {% if messages %}
-                    {% for message in messages %}
-                    <div class="alert alert-{{ message.tags }}">
-                        {{ message }}
-                    </div>
-                    {% endfor %}
+                {% for message in messages %}
+                <div class="alert alert-{{ message.tags }}">
+                    {{ message }}
+                </div>
+                {% endfor %}
                 {% endif %}
                 {% block content %}{% endblock %}
             </div>
         </div>
-<!-- ### THIS IS THE SIDEBAR #### -->
-            <div class="col-sm-3">
-                <div class="navbar-border content-section">
-                    <h3>Updates</h3>
-                    <p class='text-muted'>Get the latest info on Cascadia Dive Club!
-                        <ul class="list-group">
-                            <li class="list-group-item list-group-item-light">Recent Dives</li>
-                            <li class="list-group-item list-group-item-light">Upcomming Dive Trips</li>
-                            <li class="list-group-item list-group-item-light">Marine Ecology Certification</li>
-                            <li class="list-group-item list-group-item-light">Diving in Oregon Information</li>
-                            <li class="list-group-item list-group-item-light">Recommended Dive Gear</li>
-                        </ul>
-                    </p>
-                </div>
-                <img class="flag" src="https://www.dykking.no/images/nyhetsbilder/2020/20.01565.1.jpg">
+        <!-- ### THIS IS THE SIDEBAR #### -->
+        <div class="col-sm-3">
+            <div class="navbar-border content-section">
+                <h3 class="navbar-content">UPDATES</h3>
+                <p class='nav-subheader'>Get the latest info on Cascadia Dive Club!
+                    <ul class="list-group">
+                        <a  href="{% url 'recent-dives' %}"><li class="list-group-item list-group-item-light">Recent Dives</li></a>
+                        <li class="list-group-item list-group-item-light">Upcomming Dive Trips</li>
+                        <li class="list-group-item list-group-item-light">Underwater Naturalist Certification</li>
+                        <li class="list-group-item list-group-item-light">Where can you dive in the PNW?</li>
+                        <li class="list-group-item list-group-item-light">Recommended Dive Gear</li>
+                    </ul>
+                </p>
             </div>
+            <img class="flag" src="https://www.kohchangdive.com/wp-content/uploads/2017/07/padilogo.jpg">
+        </div>
     </main>
-    <footer>Site developed by <a href="https://www.linkedin.com/in/aaronedwardglenn">Aaron Edward Glenn</a> | &copy 2020</footer>
+    <footer>Site developed by <a class="name-link" href="https://www.linkedin.com/in/aaronedwardglenn">Aaron Edward Glenn</a> &copy {% now "Y" %}</footer>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
