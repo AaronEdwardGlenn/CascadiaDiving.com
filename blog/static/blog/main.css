@@ -10,7 +10,11 @@ h1, h2, h3, h5, h6 {
 }
 
 h4 {
-    color: #ffb9b9;
+    color: #ffb9b9 !important;
+}
+
+.map-link {
+    color: #ffb9b9 !important;
 }
 
 ul {
