@@ -21,14 +21,24 @@ ul {
     margin: 0;
 }
 
+header {
+    background-image: url("/media/background_images/dark-ocean.jpg")
+}
+
 footer {
     color: white !important;
     position: fixed;
     bottom: 0;
+    right:5px;
 }
 
 .name-link {
     color: lightblue;
+}
+
+.btn-outline-info {
+    color: white !important;
+    background-color: rgb(23, 162, 184, .3) !important;
 }
 
 .name-link:hover {
@@ -83,7 +93,7 @@ footer {
 }
 
 .nav-background {
-    background: none !important;
+    background-image: url("/media/background_images/dark-ocean.jpg");
 }
 
 .site-header .navbar-nav .nav-link {
@@ -140,6 +150,10 @@ footer {
 
 .article-title {
     color: white;
+}
+
+.recent-dive-posts {
+    size: 110%;
 }
 
 a.article-divers {
