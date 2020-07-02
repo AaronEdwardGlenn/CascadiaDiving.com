@@ -15,6 +15,9 @@ class DivePost(models.Model):
     content = models.TextField()
     date_posted = models.DateTimeField(default=timezone.now)
     diver = models.ForeignKey(User, on_delete=models.SET(get_sentinel_user))
+    image1 = models.ImageField(default='default.jpg', upload_to='recent_dive_images')
+    image2 = models.ImageField(default='default.jpg', upload_to='recent_dive_images')
+    image3 = models.ImageField(default='default.jpg', upload_to='recent_dive_images')
 
     def __str__(self):
         return self.title

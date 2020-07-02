@@ -52,7 +52,7 @@ class PostDetailView(DetailView):
 
 class PostCreateView(LoginRequiredMixin, CreateView):
     model = DivePost
-    fields = ['dive_site', 'content']
+    fields = ['title', 'dive_site', 'content', 'image1', 'image2', 'image3']
 
     def form_valid(self, form):
         form.instance.diver = self.request.user
@@ -61,7 +61,7 @@ class PostCreateView(LoginRequiredMixin, CreateView):
 
 class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = DivePost
-    fields = ['dive_site', 'content']
+    fields = ['title', 'dive_site', 'content', 'image1', 'image2', 'image3']
 
     def form_valid(self, form):
         form.instance.diver = self.request.user
