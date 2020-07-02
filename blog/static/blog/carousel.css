@@ -1,6 +1,11 @@
 @keyframes carousel-text-animation {
-  from {color: rgb(3, 252, 240);}
-  to {color: lightyellow;}
+  from {color: #e70000;}
+  to {color: #fbfbfb;}
+}
+
+@keyframes carousel-text-animation-two {
+  from {color: #fbfbfb;}
+  to {color: #e70000;}
 }
 
 .highlight-text {
@@ -13,12 +18,23 @@
     color: white;
 }
 .vizable-text {
-    text-shadow: 1px 1px 4px black;
-    color: lightyellow;
+    text-shadow: 1px 1px 1px black;
+    color: #fbfbfb;
     animation-name: carousel-text-animation;
-    animation-duration: 8s;
+    animation-duration: 5.5s;
+    padding-bottom: 10px;
+    font-size: 3rem !important;
 }
 
-.carousel-border {
-    border: 5px solid darkolivegreen;
+.vizable-text-two {
+    text-shadow: 1px 1px 1px black;
+    color: #e70000;
+    animation-name: carousel-text-animation-two;
+    animation-duration: 5.5s;
+    padding-bottom: 10px;
+    font-size: 3rem !important;
+}
+
+.carousel {
+    padding-left: 10px !important;
 }

@@ -27,6 +27,14 @@ class PostListView(ListView):
     paginate_by = 2
 
 
+class RecentDivesListView(ListView):
+    model = DivePost
+    template_name = 'blog/recent_dives.html'
+    context_object_name = 'posts'
+    ordering = ['-date_posted']
+    paginate_by = 4.
+
+
 class UserPostListView(ListView):
     model = DivePost
     template_name = 'blog/user_diveposts.html'
@@ -44,7 +52,7 @@ class PostDetailView(DetailView):
 
 class PostCreateView(LoginRequiredMixin, CreateView):
     model = DivePost
-    fields = ['dive_site', 'content']
+    fields = ['title', 'dive_site', 'content', 'image1', 'image2', 'image3']
 
     def form_valid(self, form):
         form.instance.diver = self.request.user
@@ -53,7 +61,7 @@ class PostCreateView(LoginRequiredMixin, CreateView):
 
 class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = DivePost
-    fields = ['dive_site', 'content']
+    fields = ['title', 'dive_site', 'content', 'image1', 'image2', 'image3']
 
     def form_valid(self, form):
         form.instance.diver = self.request.user
