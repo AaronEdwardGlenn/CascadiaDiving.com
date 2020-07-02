@@ -1,3 +1,4 @@
 from django.contrib import admin
+from .models import Upcoming_Dives
 
-# Register your models here.
+admin.site.register(Upcoming_Dives)
