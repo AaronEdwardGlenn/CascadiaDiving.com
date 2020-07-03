@@ -13,4 +13,4 @@ class Upcoming_Dives(models.Model):
         return self.title
 
     def get_absolute_url(self):
-        return reverse('upcomming-dives', kwargs={'pk': self.pk})
+        return reverse('blog-home', kwargs={'pk': self.pk})

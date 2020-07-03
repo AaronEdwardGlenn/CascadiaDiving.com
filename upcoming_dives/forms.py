@@ -5,4 +5,4 @@ from django import forms
 class UpcommingDivesForm(forms.ModelForm):
     class Meta:
         model = Upcoming_Dives
-        field = ['title', 'date', 'location', 'content', 'image']
+        fields = ['title', 'date', 'location', 'content', 'image']
