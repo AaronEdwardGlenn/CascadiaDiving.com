@@ -7,7 +7,7 @@
     <a href="{{ post.image.url }}"><img class="upcoming-img" src="{{ post.image.url }}"></a>
     <div class="media-body">
         <div class="article-metadata">
-            <small class="article-date">{{ post.date|date:'l, F jS Y' }}</small>
+            <small class="article-date">{{ post.date|date:'l, F jS Y @ g:i a' }}</small>
         </div>
         <h2>{{ post.title }}</h2>
         <h4>{{ post.location }}</h4>
