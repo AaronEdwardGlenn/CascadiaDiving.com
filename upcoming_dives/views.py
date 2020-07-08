@@ -19,6 +19,9 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 #
 #     return render(request, 'upcoming_dives/upcoming_dives_form.html', context)
 
+def checklist(request):
+    return render(request, 'upcoming_dives/trip_info.html')
+
 
 class UpcomingPostCreateView(LoginRequiredMixin, CreateView):
     model = Upcoming_Dives

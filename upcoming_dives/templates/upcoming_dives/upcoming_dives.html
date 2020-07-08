@@ -9,9 +9,10 @@
         <div class="article-metadata">
             <small class="article-date">{{ post.date|date:'l, F jS Y @ g:i a' }}</small>
         </div>
-        <h2>{{ post.title }}</h2>
-        <h4>{{ post.location }}</h4>
-        <!-- <p class="article-content">{{ post.content }}</p> -->
+        <h2 class="article-title">{{ post.title }}</h2>
+        <p class="article-content">{{ post.content }}</p>
+        <h4><a class="map-link" href="https://www.google.com/maps/search/?api=1&query={{ post.location }}">{{ post.location }}</a></h4>
+        <h4><a href="{% url 'checklist' %}">Checklist</h4>
     </div>
 </article>
 {% endfor %}
