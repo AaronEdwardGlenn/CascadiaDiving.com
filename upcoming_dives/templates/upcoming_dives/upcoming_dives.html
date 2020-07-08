@@ -36,5 +36,6 @@
 {% endif %}
 {% if request.user.is_superuser %}
     <a href="{% url 'upcoming-form' %}"><button class="btn btn-danger">Aaron, New Dive?</button></a>
+{% else %}
 {% endif %}
 {% endblock %}
