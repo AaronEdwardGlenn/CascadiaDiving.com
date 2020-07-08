@@ -6,7 +6,7 @@ from .views import PostListView, PostDetailView, PostCreateView, PostUpdateView,
 urlpatterns = [
     path('', PostListView.as_view(), name='blog-home'),
     path('user/<str:username>', UserPostListView.as_view(), name='user-diveposts'),
-    path('recent', RecentDivesListView.as_view(), name='recent-dives'),
+    path('recent/', RecentDivesListView.as_view(), name='recent-dives'),
     path('about/', views.about, name='blog-about'),
     path('carousel/', views.carousel, name='blog-carousel'),
     path('spearfishing/', views.spearfishing, name='spearfishing'),

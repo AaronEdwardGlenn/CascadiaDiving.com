@@ -14,11 +14,7 @@ def register(request):
             return redirect('blog-home')
     else:
         form = UserRegisterForm()
-        context = {
-            'register': 'active',
-            'form': form
-        }
-    return render(request, 'users/register.html', context)
+    return render(request, 'users/register.html', {'form': form})
 
 
 @login_required

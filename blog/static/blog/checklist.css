@@ -1,0 +1,12 @@
+.list {
+    background-color: rgba(255, 0, 0, 0.6);
+    color: white !important;
+}
+
+.list-title {
+    color: rgb(0, 255, 255) !important;
+}
+
+.check-heading {
+    color: black !important;
+}
