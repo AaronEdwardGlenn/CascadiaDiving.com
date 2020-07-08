@@ -13,6 +13,7 @@
         <p class="article-content">{{ post.content }}</p>
         <h4><a class="map-link" href="https://www.google.com/maps/search/?api=1&query={{ post.location }}">{{ post.location }}</a></h4>
         <a href="{% url 'checklist' %}"><button class="btn btn-outline-info">Trip Checklist</button>
+        <a href="#"><button class="btn btn-success">Interested?</button>
     </div>
 </article>
 {% endfor %}
