@@ -11,7 +11,8 @@
     <link rel="stylesheet" type="text/css" href="{% static 'blog/about.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'blog/carousel.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'blog/spearfishing.css' %}">
-
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/upcoming.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/checklist.css' %}">
     {% if title %}
     <title>CDC - {{ title }}</title>
     {% else %}
@@ -75,8 +76,9 @@
                 <h3 class="navbar-content">UPDATES</h3>
                 <p class='nav-subheader'>Get the latest info on Cascadia Dive Club!
                     <ul class="list-group">
-                        <a  href="{% url 'recent-dives' %}"><li class="list-group-item list-group-item-light">Recent Dives</li></a>
-                        <li class="list-group-item list-group-item-light">Upcomming Dive Trips</li>
+                        <a class="side-nav-list" href="{% url 'recent-dives' %}"><li class="list-group-item side-nav-list list-group-item-light">Recent Dives</li></a>
+                        <a href="{% url 'upcoming' %}">
+                        <li class="side-nav-list side-nav-list-mid list-group-item list-group-item-light">Upcomming Dive Trips</li></a>
                         <li class="list-group-item list-group-item-light">Underwater Naturalist Certification</li>
                         <li class="list-group-item list-group-item-light">Where can you dive in the PNW?</li>
                         <li class="list-group-item list-group-item-light">Recommended Dive Gear</li>
