@@ -5,8 +5,9 @@
     100% { margin-left:0px; }
 }
 .text-section {
-    background-color: rgba(255, 239, 213, 0.9);
-    height: 100%;
+    background-color: rgba(255, 0, 0, 0.7);
+    color: white !important;
+    font-size: 18px !important;
 }
 
 .move:first-of-type {
@@ -21,4 +22,9 @@
 .responsive {
     width: 100%;
     height: auto;
+}
+
+.about-links {
+    color: white;
+    text-decoration: underline;
 }
