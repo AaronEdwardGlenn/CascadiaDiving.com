@@ -1,18 +1,19 @@
 {% extends 'blog/base.html' %}
 {% block content %}
-<h1 class="move pl-2">Recent Club Dives</h1>
+<h1 class="move pl-2">Upcoming Club Dives</h1>
 <br>
 {% for post in posts %}
 <article class="media content-section">
-    <img class="rounded-circle article-img" src="{{ post.diver.profile.image.url }}">
+    <a href="{{ post.image.url }}"><img class="upcoming-img" src="{{ post.image.url }}"></a>
     <div class="media-body">
         <div class="article-metadata">
-            <!-- <a class="mr-2 article-divers" href={% url 'user-diveposts' post.diver.username %}>{{ post.diver }}</a> -->
-            <small class="article-date">{{ post.date_posted|date:'l, F jS Y' }}</small>
+            <small class="article-date">{{ post.date|date:'l, F jS Y @ g:i a' }}</small>
         </div>
-        <h2><a class="article-title" href="{% url 'post-detail' post.id %}">{{ post.title }}</a></h2>
-        <h4>{{ post.dive_site }}</h4>
-        <!-- <p class="article-content">{{ post.content }}</p> -->
+        <h2 class="article-title">{{ post.title }}</h2>
+        <p class="article-content">{{ post.content }}</p>
+        <h4><a class="map-link" href="https://www.google.com/maps/search/?api=1&query={{ post.location }}">{{ post.location }}</a></h4>
+        <p class="article-content">Interested in joining this trip? Call Aaron at (503)-380-5712 to sign up!</p>
+        <a href="{% url 'checklist' %}"><button class="btn btn-outline-info">Trip Checklist</button>
     </div>
 </article>
 {% endfor %}
@@ -33,5 +34,9 @@
 <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.next_page_number }}">Next</a>
 <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.paginator.num_pages }}">Last</a>
 {% endif %}
+{% endif %}
+{% if request.user.is_superuser %}
+    <a href="{% url 'upcoming-form' %}"><button class="btn btn-danger">Aaron, New Dive?</button></a>
+{% else %}
 {% endif %}
 {% endblock %}

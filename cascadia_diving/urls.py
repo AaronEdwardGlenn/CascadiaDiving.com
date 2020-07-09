@@ -21,11 +21,11 @@ from django.conf.urls.static import static
 from django.conf import settings
 from join import views as join_views
 
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('register/', user_views.register, name='register'),
     path('', include('blog.urls')),
+    path('', include('upcoming_dives.urls')),
     path('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'),
     path('logout/', auth_views.LogoutView.as_view(template_name='users/logout.html'), name='logout'),
     path('profile/', user_views.profile, name='profile'),

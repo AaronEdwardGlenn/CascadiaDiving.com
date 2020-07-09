@@ -1,12 +1,20 @@
 {% extends 'blog/base.html' %}
 {% block content %}
-<div>
-    <video width="100%" height=auto autoplay muted>
+    <!-- <video width="100%" height=auto autoplay muted>
         <source src="/media/spearfishing.mp4" type="video/mp4">
             Your browser does not support the video tag.
-        </video>
-<div class="text-section">
-    Have you ever wanted to go spearfishing?
-</div>
+        </video> -->
+<h1 class="move pl-2 mb-3">Spearfishing</h1>
+        <img class="spear-img mb-2" src="/media/spearfishing1.jpg">
+<div class="text-section pl-1">
+    <p>
+        There is something incredibly magical about the art of spearfishing. It is such a rarity to experience the feeling of entering another world to hunt for food. A world where you are no longer at the top of the food chain. In this place you must outwit and out maneuver your next meal, all the while keeping eye on any prehistoric behemoths who might emerge from the depths thinking of outmaneuvering you.  For some, this may seem daunting. And rightly so. It’s not for everyone. But if you want to reconnect with the ancient practice of truely putting yourself into raw, unforgiving nature, and pushing yourself as hard as you can to capture your prize, then spearfishing will be rewarding in a way unlike anything else.
+    </p>
+    <p>
+        Spearfishing with Cascadia Dive Club is done in the most sustainable way possible. We only catch what we are going to eat, and we don’t waste fish. This isn’t a sport we do for fun alone, but to consume food that is purely wild and from its natural habitat. If you are interested in learning to spearfish, <a class="about-links" href="{% url 'lessons' %}">we offer a full range of courses from beginner to advanced</a>. These courses are taught in the spirit of conservation, fish identification, and conscientious spearfishing practices.
+    </p>
+    <p>
+        Spearfishing in Oregon can be uniquely done on SCUBA. While this is illegal in both California and Washington (and pretty much everywhere else in the world), Oregon waters are treacherous enough that only a rare few engage in the activity off the Oregon coast. Therefore we offer courses in spearfishing and <a class="about-links" href="{% url 'upcoming' %}">spearfishing trips</a> as SCUBA divers in Oregon, or as freedivers for those wishing to broaden their range of spearfishing locations.
+    </p>
 </div>
 {% endblock %}
