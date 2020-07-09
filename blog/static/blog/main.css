@@ -32,6 +32,25 @@ footer {
     margin-left:3px;
 }
 
+.solid {
+    background-color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.ablue {
+    color: blue !important;
+    font-weight: bold;
+}
+
+.unmuted {
+    color: white !important;
+}
+
+.text-muted {
+    color: white !important !important;
+}
+
 .side-nav-list {
     margin-bottom: 0 !important;
     border-bottom-right-radius: 0 !important;
