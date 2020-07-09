@@ -38,6 +38,11 @@ class UpcomingPostListView(ListView):
     ordering = ['-date']
     paginate_by = 3
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context.update({'upcoming': 'active'})
+        return context
+
 
 class UpcomingPostDetailView(DetailView):
     model = Upcoming_Dives
