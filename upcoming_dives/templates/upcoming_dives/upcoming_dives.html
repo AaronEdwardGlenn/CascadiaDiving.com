@@ -1,6 +1,6 @@
 {% extends 'blog/base.html' %}
 {% block content %}
-<h1 class="move">Upcoming Club Dives</h1>
+<h1 class="move pl-2">Upcoming Club Dives</h1>
 <br>
 {% for post in posts %}
 <article class="media content-section">
@@ -12,8 +12,8 @@
         <h2 class="article-title">{{ post.title }}</h2>
         <p class="article-content">{{ post.content }}</p>
         <h4><a class="map-link" href="https://www.google.com/maps/search/?api=1&query={{ post.location }}">{{ post.location }}</a></h4>
+        <p class="article-content">Interested in joining this trip? Call Aaron at (503)-380-5712 to sign up!</p>
         <a href="{% url 'checklist' %}"><button class="btn btn-outline-info">Trip Checklist</button>
-        <a href="#"><button class="btn btn-success">Interested?</button>
     </div>
 </article>
 {% endfor %}
