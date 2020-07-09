@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="{% static 'blog/spearfishing.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'blog/upcoming.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'blog/checklist.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/lessons.css' %}">
     {% if title %}
     <title>CDC - {{ title }}</title>
     {% else %}
@@ -37,7 +38,7 @@
                         <a class="nav-item nav-link {{ home }}" href="{% url 'blog-home' %}">Home</a>
                         <a class="nav-item nav-link {{ about }}" href="{% url 'blog-about' %}">About</a>
                         <a class="nav-item nav-link {{ spearfishing }}" href="{% url 'spearfishing' %}">Spearfishing</a>
-                        <a class="nav-item nav-link {{ lessons }}" href="{% url 'lessons' %}">Lessons</a>
+                        <a class="nav-item nav-link {{ lessons }}" href="{% url 'lessons' %}">Certification</a>
                         <a class="nav-item nav-link {{ join }}" href="{% url 'join' %}">Membership</a>
                     </div>
                     <!-- Navbar Right Side -->

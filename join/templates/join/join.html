@@ -1,25 +1,16 @@
 {% extends 'blog/base.html' %}
-{% load crispy_forms_tags %}
 {% block content %}
-<div class="content-section">
-    <form method="POST">
-        {% csrf_token %}
-        <fieldset class="form-group">
-            <legend class="border-bottom mb-4">Join Cascadia Dive Club!</legend>
-            <div class="media-body">
-                <h2 class="account-heading">{{ user.username }}</h2>
-                <p class="text-secondary">{{ user.email }}</p>
-            </div>
-            {{ form|crispy }}
-        </fieldset>
-        <div class="form-group">
-            <button class="btn btn-outline-info" type="submit">Join!</button>
-        </div>
-    </form>
-    <!-- <div class="border-top pt-3">
-    <small class="text-muted">
-    Already Have An Account?<a class="ml-2" href="{% url 'login' %}">Login</a>
-</small>
-</div> -->
+<!-- <video width="100%" height=auto autoplay muted>
+<source src="/media/spearfishing.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video> -->
+<h1 class="move pl-2 mb-3">Membership</h1>
+<img class="spear-img mb-2" src="/media/member.jpg">
+<div class="text-section pl-1">
+    <p>
+        Membership with Cadcadia Dive Club is very straight forward. Simply register on our site and you will get occational emails with upcoming dive trips and events. There is no charge for joining. Cadcadia Dive Club is all about bringing the diving community of the PNW togther to enjoy exploration and appreciation of the underwater world.
+    </p>
+    <p> If you are interested in diving more, or just joining at one of our hosted dinner parties with fresh caught fish and homemade wine, please consider becoming a member today!
+    </p>
 </div>
 {% endblock %}
