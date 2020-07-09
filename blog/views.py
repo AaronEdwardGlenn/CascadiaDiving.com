@@ -120,3 +120,10 @@ def naturalist(request):
         'naturalist': 'active'
     }
     return render(request, 'blog/naturalist.html', context)
+
+
+def pnwdive(request):
+    context = {
+        'pnwdive': 'active'
+    }
+    return render(request, 'blog/pnw_diving.html', context)
