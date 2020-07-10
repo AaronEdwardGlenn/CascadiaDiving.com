@@ -127,3 +127,10 @@ def pnwdive(request):
         'pnwdive': 'active'
     }
     return render(request, 'blog/pnw_diving.html', context)
+
+
+def recgear(request):
+    context = {
+        'recgear': 'active'
+    }
+    return render(request, 'blog/rec_gear.html', context)

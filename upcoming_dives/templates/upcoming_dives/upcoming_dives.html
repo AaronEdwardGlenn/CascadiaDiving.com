@@ -4,7 +4,7 @@
 <br>
 {% for post in posts %}
 <article class="media content-section">
-    <a href="{{ post.image.url }}"><img class="upcoming-img" src="{{ post.image.url }}"></a>
+    <a target="_blank" href="{{ post.image.url }}"><img class="upcoming-img" src="{{ post.image.url }}"></a>
     <div class="media-body">
         <div class="article-metadata">
             <small class="article-date">{{ post.date|date:'l, F jS Y @ g:i a' }}</small>

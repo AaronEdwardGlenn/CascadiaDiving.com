@@ -12,6 +12,7 @@ urlpatterns = [
     path('spearfishing/', views.spearfishing, name='spearfishing'),
     path('naturalist/', views.naturalist, name='naturalist'),
     path('pnwdiving/', views.pnwdive, name='pnwdive'),
+    path('recgear/', views.recgear, name='recgear'),
     path('lessons/', views.lessons, name='lessons'),
     path('post/<int:pk>/', PostDetailView.as_view(), name='post-detail'),
     path('post/new/', PostCreateView.as_view(), name='post-create'),
