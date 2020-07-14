@@ -11,7 +11,7 @@
             <small class="article-date">{{ post.date_posted|date:'l, F jS Y' }}</small>
         </div>
         <h2 class="article-title">{{ post.title }}</h2>
-        <h4><a class="map-link" href="https://www.google.com/maps/search/?api=1&query={{ post.dive_site }}">{{ post.dive_site }}</a></h4>
+        <h4><a class="map-link name-link" target="_blank" href="https://www.google.com/maps/search/?api=1&query={{ post.dive_site }}">{{ post.dive_site }}</a></h4>
         <p class="article-content">{{ post.content }}</p>
         <div class="row">
             <div class="column">
