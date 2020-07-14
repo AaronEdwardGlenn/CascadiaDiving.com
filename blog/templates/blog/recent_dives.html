@@ -4,16 +4,33 @@
 <br>
 {% for post in posts %}
 <article class="media content-section">
-    <img class="rounded-circle article-img" src="{{ post.diver.profile.image.url }}">
+    <!-- <img class="rounded-circle article-img" src="{{ post.diver.profile.image.url }}"> -->
     <div class="media-body">
         <div class="article-metadata">
-            <!-- <a class="mr-2 article-divers" href={% url 'user-diveposts' post.diver.username %}>{{ post.diver }}</a> -->
+            <!-- <a class="mr-2 article-divers" href="#">{{ post.diver }}</a> -->
             <small class="article-date">{{ post.date_posted|date:'l, F jS Y' }}</small>
         </div>
-        <h2><a class="article-title" href="{% url 'post-detail' post.id %}">{{ post.title }}</a></h2>
-        <h4>{{ post.dive_site }}</h4>
-        <!-- <p class="article-content">{{ post.content }}</p> -->
-    </div>
+        <h2 class="article-title">{{ post.title }}</h2>
+        <h4><a class="map-link" href="https://www.google.com/maps/search/?api=1&query={{ post.dive_site }}">{{ post.dive_site }}</a></h4>
+        <p class="article-content">{{ post.content }}</p>
+        <div class="row">
+            <div class="column">
+                <a target="_blank" href="{{ post.image1.url }}"><img src="{{ post.image1.url }}" alt="IMAGE 1 HERE"></img></a>
+            </div>
+            <div class="column">
+                <a target="_blank" href="{{ post.image2.url }}"><img src="{{ post.image2.url }}" alt="IMAGE 2 HERE"></img></a>
+            </div>
+            <div class="column">
+                <a target="_blank" href="{{ post.image3.url }}"><img src="{{ post.image3.url }}" alt="IMAGE 3 HERE"></img></a>
+            </div>
+        </div>
+                <div class="article-metadata">
+                </div>
+                {% if post.diver == user %}
+                <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'post-update' post.id %}">Update</a>
+                <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'post-delete' post.id %}">Delete</a>
+                {% endif %}
+            </div>
 </article>
 {% endfor %}
 {% if is_paginated %}

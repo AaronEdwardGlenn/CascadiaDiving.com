@@ -4,18 +4,15 @@
 <div class="content-section">
     <form method="POST" enctype="multipart/form-data">
         {% csrf_token %}
+        <h2 class="article-title">Log New Dive</h2>
         <fieldset class="form-group solid">
-            <legend class="border-bottom mb-4">Log New Dive</legend>
+            <legend class="border-bottom mb-4"></legend>
             {{ form|crispy }}
         </fieldset>
         <div class="form-group">
             <button class="btn btn-outline-info" type="submit">Log!</button>
         </div>
     </form>
-    <div class="border-top pt-3">
-        <small class="dark">
-            Already Have An Account?<a class="ml-2 danger" href="{% url 'login' %}">Login</a>
-        </small>
-    </div>
+
 </div>
 {% endblock %}

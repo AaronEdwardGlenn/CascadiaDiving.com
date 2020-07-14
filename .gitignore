@@ -108,10 +108,6 @@ celerybeat.pid
 *.sage.py
 
 # Media
-<<<<<<< HEAD
-=======
-
->>>>>>> 2478dbd23f8f7ab89f81735800f38a5d41ced843
 media/
 
 # Environments
